@@ -107,6 +107,9 @@ slides > slide {
   margin-left: -$slide-width / 2;
   margin-top: -$slide-height / 2;
   padding: $slide-top-bottom-padding $slide-left-right-padding;
+  &.no-padding {
+    padding: 0px;
+  }
 
   @include border-radius($slide-border-radius);
   //@include box-shadow(5px 5px 20px $gray-4);
@@ -193,7 +196,6 @@ slides > slide {
   &.title-slide {
     &:after {
       content: '';
-      background: url(../../images/io2012_logo.png) no-repeat 100% 50%;
       @include background-size(contain);
       position: absolute;
       bottom: $slide-top-bottom-padding;
@@ -563,6 +565,7 @@ slide.fill {
   background-repeat: no-repeat;
   @include border-radius($slide-border-radius);
   @include background-size(cover);
+  padding: 0px;
 }
 
 /* Size variants */
